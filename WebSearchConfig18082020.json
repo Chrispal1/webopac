@@ -1,0 +1,273 @@
+{
+  "About": {
+    "Text": "About",
+    "Url": "https://www.ddigit.eu"
+  },
+  "RecordsPerPage": 10,
+  "InitialDatabase": "simple search",
+  "ApiUrl": "https://www.webopac.cfwb.be/wwwopacxnivelles/wwwopac.ashx",
+  "LoansApiUrl": "https://www.webopac.cfwb.be/ddloanapi-nivelles/loans",
+  "ShowAutoCompleteIcons": true,
+  "Login": true,
+  "SupportedLanguages": [
+    "fr",
+    "nl",
+    "en"
+  ],
+  "DefaultLanguage": "fr",
+  "CustomSettings": {
+  },
+  "MenuItems": [
+    {
+      "Page": "account",
+      "Label": "Account",
+      "Icon": "user-circle-duotone.svg"
+    },
+    {
+      "Page": "searchPage",
+      "Label": "Search",
+      "Icon": "search-duotone.svg"
+    },
+    {
+      "Page": "recordList",
+      "Label": "Results",
+      "Icon": "list-alt-duotone.svg"
+    },
+    {
+      "Page": "recordDetail",
+      "Label": "Details",
+      "Icon": "table-duotone.svg"
+    },
+	{
+      "Page": "fag",
+      "Label": "FAQ",
+      "Icon": "table-duotone.svg"
+    },
+  ],
+  "SearchForms": {
+    "simple search": {
+      "Database": "choicefullcatalogue",
+      "FixedRows": true,
+      "FieldsSelectable": false,
+      "AutoClear": true,
+      "ShowHeader": false,
+      "SearchFields": [
+        {
+          "Type": "Q",
+          "Field": {
+            "Label": "Search for",
+            "PlaceHolder": "...",
+            "ToolTip": "Qsearch tip"
+          }
+        }
+      ],
+      "BriefDisplays": [
+        "ResultDisplayList"
+      ],
+      "DetailDisplays": [
+        "ResultDisplayDetails"
+      ]
+    },
+    "expert search": {
+      "Database": "choicefullcatalogue",
+      "Truncation": true,
+      "BooleanOperators": true,
+      "AllowEmptyForm": true,
+      "InitialRows": 10,
+      "SearchFields": [
+        {
+          "Fixed": true,
+          "AutoComplete": true,
+          "AutoCompleteList": [
+            "book",
+            "game"
+          ],
+          "Field": {
+            "Label": "Search in",
+            "Name": "dataset",
+            "PlaceHolder": "...",
+            "Value": "book"
+          }
+        },
+        {
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Location",
+            "Name": "copy.site",
+            "PlaceHolder": "...",
+            "Truncate": true,
+            "ToolTip": "location tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Word(s) from the title",
+            "Name": "title",
+            "PlaceHolder": "...",
+            "ToolTip": "title tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Author",
+            "Name": "author.name",
+            "PlaceHolder": "...",
+            "ToolTip": "author tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Corporate",
+            "Name": "corporate_author",
+            "PlaceHolder": "...",
+            "ToolTip": "author tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Publisher",
+            "Name": "publisher",
+            "PlaceHolder": "...",
+            "ToolTip": "publisher tip"
+          }
+        },
+        {
+          "AutoComplete": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Theme adult",
+            "Name": "literary_theme.adults",
+            "PlaceHolder": "...",
+            "ToolTip": "theme adult tip"
+          }
+        },
+        {
+          "AutoComplete": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Theme youth",
+            "Name": "literary_theme.youth",
+            "PlaceHolder": "...",
+            "ToolTip": "theme youth tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Collection",
+            "Name": "series.title",
+            "PlaceHolder": "...",
+            "ToolTip": "collection tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "AutoComplete": true,
+          "Field": {
+            "Label": "Subject term",
+            "Name": "rameau.complete",
+            "PlaceHolder": "...",
+            "ToolTip": "subject tip"
+          }
+        },
+        {
+          "Field": {
+            "Label": "Year",
+            "Name": "search_year",
+            "PlaceHolder": "from",
+            "ToolTip": "year tip"
+          },
+          "Field2": {
+            "Label": "Year",
+            "Name": "search_year",
+            "PlaceHolder": "to",
+            "Value": null
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Tags",
+            "Name": "language_code",
+            "PlaceHolder": "...",
+            "ToolTip": "tags tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Comment",
+            "Name": "si_comments",
+            "PlaceHolder": "...",
+            "ToolTip": "comment tip"
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Notes",
+            "Name": "notes",
+            "PlaceHolder": "..."
+          }
+        },
+        {
+          "Truncation": true,
+          "Truncate": true,
+          "Field": {
+            "Label": "Word(s) from the abstract",
+            "Name": "abstract",
+            "PlaceHolder": "..."
+          }
+        },
+        {
+          "Field": {
+            "Label": "ISBN",
+            "Name": "isbn",
+            "PlaceHolder": "..."
+          }
+        }
+      ],
+      "SortByOptions": {
+        "Unsorted": "-",
+        "Title": "title",
+        "Author": "author.name",
+        "Year": "search_year"
+      },
+      "SortBy": "-",
+      "BriefDisplays": [
+        "ResultDisplayList"
+      ],
+      "DetailDisplays": [
+        "ResultDisplayDetails"
+      ]
+    }
+  },
+  "BriefDisplays": {
+    "ResultDisplayList": {
+      //"Description": "List with planned evaluations",
+    }
+  },
+  "GalleryDisplays": {
+    "ResultDisplayGallery": {
+      /* Gallery view, without a header */
+      //"Description": "Gallery with planned evaluations"
+    }
+  }
+}
